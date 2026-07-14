@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react'
 import { NAV_LINKS, PROFILE } from '@/data/portfolio'
-import { EASE } from '@/lib/motion'
 
 export function Footer() {
   return (

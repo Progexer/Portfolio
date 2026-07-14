@@ -4,7 +4,7 @@ import { BriefcaseBusiness, GraduationCap, Users, Trophy } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
 import { EXPERIENCE, LEADERSHIP, ACHIEVEMENTS, EDUCATION } from '@/data/portfolio'
 import { SpotlightCard } from '@/components/ui/SpotlightCard'
-import { fadeUp, stagger, EASE } from '@/lib/motion'
+import { fadeUp, stagger } from '@/lib/motion'
 
 export function Experience() {
   const leftRef = useRef<HTMLDivElement>(null)

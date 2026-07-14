@@ -1,12 +1,11 @@
 import { useRef, useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Github, ArrowUpRight, ArrowLeft, ArrowRight, Keyboard } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
 import { ProjectVisual } from './ProjectVisual'
 import { PROJECTS, type Project } from '@/data/portfolio'
 import { SpotlightCard } from '@/components/ui/SpotlightCard'
 import { TiltCard } from '@/components/ui/TiltCard'
-import { EASE } from '@/lib/motion'
 
 export function Projects() {
   const scrollRef = useRef<HTMLDivElement>(null)

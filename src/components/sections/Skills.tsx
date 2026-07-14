@@ -4,7 +4,7 @@ import { Section } from '@/components/ui/Section'
 import { Marquee } from '@/components/ui/Marquee'
 import { SKILLS } from '@/data/portfolio'
 import { SpotlightCard } from '@/components/ui/SpotlightCard'
-import { fadeUp, stagger, EASE } from '@/lib/motion'
+import { EASE } from '@/lib/motion'
 import { cn } from '@/lib/utils'
 
 const ALL_TECH = SKILLS.flatMap((s) => s.items)
