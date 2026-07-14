@@ -21,7 +21,7 @@ export default function App() {
       <CursorGlow />
       <ScrollProgress />
 
-      <div className="relative z-10">
+      <div className="relative z-10 overflow-x-hidden">
         {/* Skip link for keyboard / screen-reader users */}
         <a
           href="#main"
