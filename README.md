@@ -49,49 +49,26 @@ No content is hardcoded inside components — edit one file and the whole site u
 - **Resume**: replace `public/Amit_Kumar_Resume.pdf` with your real resume (keep the filename, or update `PROFILE.resumeUrl`).
 - **GitHub**: the GitHub section reads `PROFILE.githubUser` (`Progexer`) and calls the public REST API — no token needed for light traffic. If you hit rate limits, proxy the calls or add a token via a serverless function.
 
-## Contact form (EmailJS — already wired up)
+## Contact form (Web3Forms — already wired up)
 
-The contact form is **fully integrated with EmailJS** — it validates input, shows a
-loading state, disables the button while sending, resets on success, and displays
-success/error toast notifications. `@emailjs/browser` is already installed.
+The contact form is **fully integrated with Web3Forms** — it validates input, shows a loading state, disables the button while sending, resets on success, and displays success/error toast notifications.
 
-To make it live you only need to **create an EmailJS account and set three env vars** —
-no code changes required.
+To make it live you only need to **get a free Web3Forms access key and set one env var** — no account linking or OAuth authorization required.
 
-### 1. Create the EmailJS resources
+### 1. Get a Web3Forms access key
 
-Sign up at **[emailjs.com](https://www.emailjs.com)** (free tier is plenty), then grab:
+Go to **[web3forms.com](https://web3forms.com)**, enter your email address (where you want to receive emails), and click **Create Access Key**. The key will be sent to your inbox instantly.
 
-| Value | Where to find it |
-| --- | --- |
-| **Service ID** | Dashboard ▸ **Email Services** → add a service (Gmail, Outlook, etc.), then copy its **Service ID**. |
-| **Template ID** | Dashboard ▸ **Email Templates** → create a template, then copy its **Template ID**. |
-| **Public Key** | Dashboard ▸ **Account** ▸ **General** ▸ **API Keys** → copy the **Public Key**. |
+### 2. Add the environment variable
 
-Your email template should reference these variables (the form sends all of them):
+Create a `.env` file in the root directory (based on `.env.example`) and fill in your value:
 
-```
-From: {{from_name}} <{{reply_to}}>
-Subject: {{subject}}
-
-{{message}}
-
-(Sent to {{to_email}})
-```
-
-### 2. Add the environment variables
-
-Copy `.env.example` → `.env` and fill in your values:
-
-```
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```env
+VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
 ```
 
 Restart the dev server after editing `.env`. That's it — the form is now functional.
-(The Public Key is browser-safe by design; the real `.env` file is gitignored. When
-deploying to Vercel/Netlify, add the same three variables in the host's env settings.)
+(The access key is browser-safe by design; the real `.env` file is gitignored. When deploying to Vercel/Netlify, add the same variable in the host's env settings.)
 
 ## Accessibility & performance
 
