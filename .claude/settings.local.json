@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//root/**)",
+      "Read(//root/.claude/**)",
+      "Bash(xargs head -20)",
+      "Bash(rm -f package-lock.json)",
+      "Bash(npm install *)",
+      "Bash(grep -E \"^\\(react|framer-motion|lucide-react|@studio-freight|clsx|tailwind-merge|tailwindcss|vite|typescript\\)$\")",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s -o /dev/null -w \"App.tsx -> %{http_code}\\\\n\" http://localhost:5173/src/App.tsx)",
+      "Bash(curl -s -o /dev/null -w \"main.tsx -> %{http_code}\\\\n\" http://localhost:5173/src/main.tsx)",
+      "Read(//tmp/**)",
+      "Bash(pkill -f \"vite\")"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <radialGradient id="a" cx="20%" cy="10%" r="60%">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b" cx="85%" cy="90%" r="60%">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#09090B"/>
+  <rect width="1200" height="630" fill="url(#a)"/>
+  <rect width="1200" height="630" fill="url(#b)"/>
+  <text x="80" y="250" font-family="Inter, sans-serif" font-size="34" font-weight="600" fill="#9CA3AF" letter-spacing="2">AI · ML · DATA SCIENCE</text>
+  <text x="76" y="360" font-family="Inter, sans-serif" font-size="96" font-weight="800" fill="#FFFFFF" letter-spacing="-3">Amit Kumar</text>
+  <text x="80" y="430" font-family="Inter, sans-serif" font-size="40" font-weight="600" fill="url(#g)">Building AI-powered, production-ready software.</text>
+  <text x="80" y="560" font-family="JetBrains Mono, monospace" font-size="26" fill="#9CA3AF">github.com/Progexer  ·  linkedin.com/in/amitkumar-ds</text>
+</svg>
